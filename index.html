@@ -21,20 +21,21 @@
         }
 
         header h1 {
-            font-size: 42px;
+            font-size: 32px;
             margin: 0;
             color: #ffffff;
         }
 
         header p {
             margin: 10px 0;
-            font-size: 18px;
+            font-size: 16px;
             color: #cccccc;
         }
 
         .contact-info {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
 
@@ -42,8 +43,9 @@
             list-style: none;
             padding: 0;
             display: flex;
-            gap: 15px;
-            font-size: 16px;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
         }
 
         .contact-info li {
@@ -63,28 +65,30 @@
 
         .container {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             margin: 20px;
             gap: 20px;
         }
 
         .left-column, .right-column {
-            flex: 4;
-            min-width: 300px;
             background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
         }
 
         .left-column {
-            flex: 5;
+            margin-bottom: 20px;
+        }
+
+        .left-column, .right-column {
+            width: 100%;
         }
 
         h2 {
             border-bottom: 2px solid #03a9f4;
             padding-bottom: 5px;
             margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .experience-item, .education-item, .project-item, .skills-item, .certification-item {
@@ -93,7 +97,7 @@
 
         .experience-item h3, .education-item h3 {
             margin: 0;
-            font-size: 20px;
+            font-size: 18px;
             color: #03a9f4;
         }
 
@@ -118,6 +122,40 @@
             margin-top: 20px;
             font-size: 14px;
             color: #cccccc;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .left-column, .right-column {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .contact-info ul {
+                flex-direction: row;
+                gap: 15px;
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .experience-item h3, .education-item h3 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -177,7 +215,6 @@
                     <p>First Year SGPA: 7.9</p>
                     <p>Second Year SGPA: 6.6</p>
                     <p>Third Year SGPA: 7.9</p>
-
                 </div>
                 <div class="education-item">
                     <h3>HSC</h3>
@@ -197,29 +234,37 @@
         <div class="right-column">
             <section id="projects">
                 <h2>Projects</h2>
-                
                 <div class="project-item">
                     <h3><strong>Movie Recommendation System</strong></h3>
                     <p>Created a movie recommendation system in Python utilizing content-based filtering with TF-IDF to enhance recommendation accuracy based on movie features.</p>
                 </div>
-                
                 <div class="project-item">
                     <h3><strong>Simple Workout Recommender</strong></h3>
                     <p>Designing a Python-based workout recommender system to generate personalized workout plans tailored to individual user preferences.</p>
                 </div>
-                
                 <div class="project-item">
                     <h3><strong>Text Summarizer</strong></h3>
                     <p>Built a text summarizer using Python and NLTK, applying sophisticated natural language processing techniques to produce concise and meaningful summaries from texts.</p>
                 </div>
-
                 <div class="project-item">
                     <h3><strong>Real-Time Cryptocurrency Analyzer Website</strong></h3>
                     <p>Developed a website for real-time cryptocurrency analysis as part of a group project. Collaborated with a team to incorporate features for trend visualization, current news, live price updates, and market insights.</p>
                 </div>
-                
             </section>
-
+            
+            <section id="certifications">
+                <h2>Certified Courses</h2>
+                <ul>
+                    <li>Python (Beginner, Intermediate, Core)</li>
+                    <li>AI with Python</li>
+                    <li>TensorFlow Python</li>
+                    <li>Statistics for Data Science</li>
+                    <li>Data Visualization using Python</li>
+                    <li>Product Management</li>
+                    <li>Leadership and Management</li>
+                </ul>
+            </section>
+            
             <section id="skills">
                 <h2>Skills and Abilities</h2>
                 <ul>
@@ -231,19 +276,6 @@
                     <li>Communication</li>
                     <li>Team Collaboration</li>
                     <li>Adaptability</li>
-                </ul>
-            </section>
-
-            <section id="certifications">
-                <h2>Certified Courses</h2>
-                <ul>
-                    <li>Python (Beginner, Intermediate, Core)</li>
-                    <li>AI with Python</li>
-                    <li>TensorFlow Python</li>
-                    <li>Statistics for Data Science</li>
-                    <li>Data Visualization using Python</li>
-                    <li>Product Management</li>
-                    <li>Leadership and Management</li>
                 </ul>
             </section>
 
